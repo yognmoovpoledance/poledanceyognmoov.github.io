@@ -1,22 +1,292 @@
+
 <!DOCTYPE html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La pole chez Yog'n Moov | Yog'n Moov Pole Dance</title><meta name="description" content="Une pole dance accessible et bienveillante à Soulières : aucun prérequis, petits groupes, pas de comparaison.">
-<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body>
-<header><a class="logo" href="index.html">Yog'n Moov <span>Pole Dance</span></a><nav><a href="index.html">Accueil</a><a href="pole.html" aria-current="page">La pole</a><a href="cours.html">Cours</a><a href="coaching.html">Coaching</a><a href="tarifs.html">Tarifs</a><a href="avis.html">Avis</a><a href="julie.html">Julie</a><a href="studio.html">Studio</a><a href="contact.html">Contact</a></nav></header>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La pole dance | Yog’n Moov près d’Épernay</title>
+<meta name="description" content="Découvrez la pole dance chez Yog’n Moov à Soulières près d’Épernay : force, mobilité, confiance en soi et cours en petits groupes dans une ambiance bienveillante.">
+<meta name="robots" content="index, follow">
+<style>
+:root{--black:#171615;--gold:#c5a15a;--gold-light:#e4cc94;--cream:#f5efe6;--white:#fffdf9;--pink:#d9a6af;--pink-light:#f0dfe1;--text:#302a25}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.75}
+img{max-width:100%}
+a{color:inherit}
+header{background:var(--black);color:var(--cream);padding:22px 6%;border-bottom:2px solid var(--gold)}
+.logo{display:inline-block;text-decoration:none}
+.logo img{display:block;width:190px;max-width:100%;max-height:100px;object-fit:contain}
+.brand-caption{display:block;margin-top:8px;color:var(--pink);font-size:10px;letter-spacing:4px}
+nav{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:20px}
+nav a{color:var(--cream);text-decoration:none;font-size:13px}
+nav a:hover{color:var(--pink)}
+section{padding:60px 8%}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:normal;line-height:1.25}
+h1{font-size:clamp(38px,5vw,64px);margin:18px 0}
+h2{font-size:clamp(30px,4vw,43px);margin-top:10px}
+h3{font-size:24px}
+p{margin:12px 0}
+.kicker{color:var(--gold);text-transform:uppercase;font-size:11px;letter-spacing:3px;font-weight:bold}
+.hero{background:var(--black);color:var(--cream);display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding-top:65px;padding-bottom:65px}
+.lead{font-size:18px;color:#d2cbc0}
+.hero-image{width:100%;height:500px;object-fit:cover;border:1px solid var(--gold)}
+.hero-note{font-size:12px;color:var(--pink);margin-top:24px}
+.btn{display:inline-block;background:var(--gold);color:var(--black);text-decoration:none;padding:13px 22px;margin:8px 8px 8px 0;font-size:13px;font-weight:bold;border:1px solid var(--gold)}
+.btn:hover{background:var(--gold-light)}
+.btn.alt{background:transparent;color:var(--pink);border-color:var(--pink)}
+.btn.alt:hover{background:var(--pink);color:var(--black)}
+.band{background:var(--gold);color:var(--black);text-align:center;padding:28px 8%}
+.band p{margin:5px 0}
+.soft{background:var(--white);border-top:1px solid #dfc6c8;border-bottom:1px solid #dfc6c8}
+.pink-band{background:var(--pink-light);border-top:2px solid var(--pink);border-bottom:2px solid var(--pink)}
+.dark{background:var(--black);color:var(--cream)}
+.dark .kicker{color:var(--gold-light)}
+.center{text-align:center}
+.intro{max-width:900px;margin:auto}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;list-style:none;padding:0;margin-top:25px}
+.chips li{border:1px solid var(--gold);background:var(--white);padding:8px 15px;font-size:13px}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.benefit{padding:24px;background:var(--white);border-top:3px solid var(--gold)}
+.benefit h3{margin-top:5px}
+.photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:30px}
+.photos figure{margin:0;padding:10px;background:var(--white);border:1px solid #e2d4c3}
+.photos img{display:block;width:100%;height:400px;object-fit:cover;object-position:center}
+.photos figcaption{font-size:13px;padding:12px 8px 5px;color:#6d625a}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:start}
+ul.content-list{padding-left:22px}
+.content-list li{margin-bottom:10px}
+.notice{padding:20px 23px;background:var(--pink-light);border-left:4px solid var(--pink);margin-top:24px}
+.checklist{list-style:none;padding:0}
+.checklist li{position:relative;padding-left:28px;margin-bottom:13px}
+.checklist li:before{content:"✓";position:absolute;left:0;color:#92713b;font-weight:bold;font-size:18px}
+.quote{max-width:850px;margin:auto;font-family:Georgia,"Times New Roman",serif;font-size:clamp(24px,3vw,36px);line-height:1.5}
+.cta{background:var(--black);color:var(--cream);text-align:center;border-top:3px solid var(--gold)}
+.cta .kicker{color:var(--gold-light)}
+footer{background:var(--black);color:#d2cbc0;text-align:center;padding:40px 7%;font-size:13px;border-top:1px solid #3a342d}
+footer a{color:var(--pink)}
+.footer-brand{color:var(--gold-light);font-family:Georgia,"Times New Roman",serif;font-size:27px}
+.footer-yoga{margin:28px auto 20px;padding:22px 15px;max-width:520px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+.footer-yoga h3{color:var(--gold-light);font-size:23px;margin:5px 0 10px}
+.footer-yoga a{color:var(--gold-light);font-weight:bold;text-decoration:none}
+@media(max-width:760px){
+header{padding:20px 6%}.logo img{width:165px}
+nav{gap:12px 15px}
+.hero,.benefits,.columns{grid-template-columns:1fr}
+.hero{padding:42px 7%;gap:25px}
+.hero-image{height:auto;max-height:500px;object-fit:contain}
+section{padding:45px 7%}
+.photos{grid-template-columns:1fr}
+.photos img{height:auto;max-height:520px;object-fit:contain;background:#e9e3dc}
+}
+</style>
+</head>
+<body>
+
+<header>
+<a class="logo" href="index.html" aria-label="Yog’n Moov - Accueil">
+<img src="logo_yognmoov_noir_transparent.png" alt="Logo Yog’n Moov">
+<span class="brand-caption">POLE DANCE · SOULIÈRES</span>
+</a>
+<nav aria-label="Navigation principale">
+<a href="index.html">Accueil</a>
+<a href="pole.html">La pole</a>
+<a href="cours.html">Les cours</a>
+<a href="coaching.html">Coaching</a>
+<a href="tarifs.html">Tarifs</a>
+<a href="avis.html">Avis</a>
+<a href="julie.html">À propos</a>
+<a href="studio.html">Le studio</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
 <main>
-<section><h1>Une pole dance accessible et bienveillante</h1>
-<p class="lead">Sur les réseaux, on voit des figures impressionnantes et on pense : « Moi, je ne pourrai jamais. » Ce que l'on voit rarement, c'est tout ce qu'il y a avant : les premiers essais, les gestes maladroits, les figures ratées avant d'être réussies. Tout le monde commence quelque part.</p></section>
-<section class="soft"><h2>Aucun prérequis</h2>
-<p><b>Vous n'avez jamais fait de pole ?</b> Parfait.<br><b>Vous n'êtes pas sportive ?</b> Ce n'est pas un problème.<br><b>Vous manquez de souplesse ?</b> Elle se travaille.<br><b>Peur de manquer de force ?</b> Elle se développe progressivement.</p>
-<p>Inutile d'attendre d'être prête pour commencer.</p></section>
-<section><h2>Petits groupes, vrai accompagnement</h2>
-<p>4 à 5 personnes maximum : une vraie proximité, une ambiance conviviale, et le temps de vous montrer, vous corriger et adapter ce qui est trop difficile.</p>
-<h2>Pas de comparaison</h2>
-<p>Chaque corps est différent. Votre objectif : voir ce que vous êtes capable de faire aujourd'hui par rapport à hier.</p>
-<h2>Et oui, on rigole aussi</h2>
-<p>La technique et la sécurité comptent, mais je veux surtout que vous passiez un bon moment. C'est aussi ça, l'esprit Yog'n Moov.</p>
-<p><a class="btn" href="cours.html">Voir les formules</a></p></section></main>
-<footer><p>Yog'n Moov · Pole Dance · Soulières (51130), à 15 min d'Épernay · 06 32 51 49 50</p>
-<p>Pratique sportive et de bien-être, adaptée à chacun. Elle ne remplace pas l'avis d'un médecin.</p>
-<p><a href="https://www.yognmoov.fr">Yog'n Moov : yoga, Pilates, méditation</a></p></footer></body></html>
+
+<section class="hero">
+<div>
+<p class="kicker">La pole dance, autrement</p>
+<h1>Osez découvrir tout ce dont votre corps est capable.</h1>
+<p class="lead">Et si vous essayiez une activité qui vous permet de bouger, de vous renforcer, de vous dépasser et surtout de vous faire plaisir ?</p>
+<p>Chez Yog’n Moov, la pole dance se découvre à son rythme, dans un studio à taille humaine où chacun peut apprendre sans pression ni jugement.</p>
+<a class="btn" href="contact.html">Réserver une découverte</a>
+<a class="btn alt" href="cours.html">Découvrir les cours</a>
+<p class="hero-note">Femmes et hommes · Aucun prérequis · Petits groupes</p>
+</div>
+<img class="hero-image" src="pole-photo-1.jpg" alt="Pole dance au studio Yog’n Moov à Soulières">
+</section>
+
+<div class="band">
+<p><strong>Un studio intimiste près d’Épernay</strong></p>
+<p>À Soulières · Groupes de 4 à 5 personnes · Bienveillance et convivialité</p>
+</div>
+
+<section>
+<div class="intro">
+<p class="kicker">Bien plus qu’une figure</p>
+<h2>Une discipline complète, pour le corps et l’esprit.</h2>
+<p>La pole dance associe le travail musculaire, la coordination, l’équilibre et l’expression corporelle. On apprend progressivement à se suspendre, à tourner autour de la barre, à enchaîner des mouvements et à découvrir de nouvelles possibilités.</p>
+<p>Il n’est pas nécessaire d’être déjà sportive, musclée ou souple. La force se construit, la technique s’apprend et chaque progrès compte. Ici, on avance étape par étape, sans chercher à se comparer aux autres.</p>
+</div>
+<ul class="chips">
+<li>Force</li><li>Gainage</li><li>Mobilité</li><li>Coordination</li><li>Équilibre</li><li>Souplesse</li><li>Confiance en soi</li><li>Expression corporelle</li>
+</ul>
+</section>
+
+<section class="soft">
+<div class="center">
+<p class="kicker">Les bienfaits</p>
+<h2>Renforcer son corps. Faire grandir sa confiance.</h2>
+<p>La progression ne se mesure pas uniquement aux figures réussies, mais aussi à tout ce que l’on découvre en chemin.</p>
+</div>
+<div class="benefits">
+<article class="benefit">
+<h3>Un corps plus fort</h3>
+<p>La pole sollicite progressivement les bras, le dos, les épaules, les jambes et les muscles profonds. Le gainage et la maîtrise du corps se développent au fil des séances.</p>
+</article>
+<article class="benefit">
+<h3>Plus de mobilité</h3>
+<p>Les exercices permettent de travailler la coordination, l’équilibre, la mobilité et la souplesse, chacun selon ses capacités et sans forcer.</p>
+</article>
+<article class="benefit">
+<h3>Un mental qui progresse</h3>
+<p>Oser essayer, recommencer, puis réussir une figure procure une vraie satisfaction. La pole peut aider à prendre confiance et à porter un regard plus positif sur son corps.</p>
+</article>
+</div>
+</section>
+
+<section>
+<div class="center">
+<p class="kicker">En images</p>
+<h2>Chaque corps apprend à sa façon.</h2>
+<p>On teste, on rit, on recommence et on célèbre les progrès, même les plus petits.</p>
+</div>
+<div class="photos">
+<figure>
+<img src="pole-photo-2.jpg" alt="Figure de pole dance au studio Yog’n Moov">
+<figcaption>Découvrir les mouvements et prendre ses repères.</figcaption>
+</figure>
+<figure>
+<img src="pole-photo-3.jpg" alt="Pratique de la pole dance chez Yog’n Moov">
+<figcaption>Développer sa force et sa coordination progressivement.</figcaption>
+</figure>
+<figure>
+<img src="pole-photo-4.jpg" alt="Figure technique de pole dance">
+<figcaption>Apprendre de nouvelles figures à son rythme.</figcaption>
+</figure>
+<figure>
+<img src="pole-photo-1.jpg" alt="Séance de pole dance à Soulières">
+<figcaption>Gagner en confiance, séance après séance.</figcaption>
+</figure>
+</div>
+</section>
+
+<section class="dark">
+<div class="intro">
+<p class="kicker">Est-ce fait pour vous ?</p>
+<h2>Oui, même si vous pensez ne pas en être capable.</h2>
+<p>Vous n’avez pas besoin d’être souple, musclé, sportif ou à l’aise avec votre image. Vous pouvez venir par curiosité, pour bouger autrement, retrouver confiance, relever un défi personnel ou simplement passer un bon moment.</p>
+<p>Les cours s’adressent aux femmes et aux hommes. Les mouvements sont adaptés aux possibilités de chacun et les progrès se construisent progressivement. Aucun prérequis n’est nécessaire.</p>
+<div class="notice"><strong>Vous appréhendez les grandes salles de sport ?</strong><br>Le studio est volontairement petit et intimiste. Ici, pas de foule ni de compétition : vous êtes accompagné et vous avez le temps d’apprendre.</div>
+</div>
+</section>
+
+<section class="pink-band center">
+<p class="kicker">L’esprit Yog’n Moov</p>
+<p class="quote">« Pas de jugement. Pas de compétition. Juste vous, votre progression et le plaisir de bouger. »</p>
+<p>Des groupes de 4 à 5 personnes maximum, une ambiance conviviale, de la bienveillance et le droit de recommencer autant que nécessaire.</p>
+</section>
+
+<section>
+<div class="columns">
+<div>
+<p class="kicker">Comment s’habiller ?</p>
+<h2>Une tenue simple et confortable.</h2>
+<p>Pour la pole dance, la peau doit être en contact avec la barre à certains endroits afin de favoriser l’adhérence. Une tenue qui laisse les jambes et certaines zones du haut du corps découvertes est donc souvent nécessaire.</p>
+<ul class="content-list">
+<li>Un short de sport.</li>
+<li>Une brassière ou un débardeur confortable.</li>
+<li>Des vêtements qui permettent de bouger librement.</li>
+<li>Un legging peut être utile pour certains exercices au sol, mais ne convient pas à toutes les figures sur la barre.</li>
+</ul>
+<p>Pas besoin d’acheter une tenue spéciale pour votre premier cours : l’essentiel est d’être à l’aise et de pouvoir bouger.</p>
+</div>
+<div>
+<p class="kicker">Dans votre sac</p>
+<h2>Les indispensables.</h2>
+<ul class="checklist">
+<li>Une bouteille d’eau pour vous hydrater.</li>
+<li>Une petite serviette personnelle.</li>
+<li>Un tapis pour les exercices au sol et les étirements, si vous en avez un.</li>
+<li>Votre bonne humeur et l’envie de découvrir quelque chose de nouveau !</li>
+</ul>
+<div class="notice"><strong>Avant le cours :</strong> évitez les crèmes, huiles et laits corporels sur la peau, car ils rendent la barre glissante. Retirez les bijoux, bagues, montres et accessoires susceptibles de s’accrocher ou de rayer la barre.</div>
+</div>
+</div>
+</section>
+
+<section class="soft">
+<div class="intro">
+<p class="kicker">Le déroulement d’un cours</p>
+<h2>On prend le temps d’apprendre.</h2>
+<p>Une séance comprend un échauffement, un travail technique adapté, l’apprentissage progressif de mouvements et un retour au calme selon le contenu du cours. L’échauffement est important : arrivez à l’heure afin de pouvoir y participer entièrement.</p>
+<p>Les figures ne sont jamais à réussir à tout prix. On adapte les exercices, on prend le temps de comprendre les placements et on respecte les sensations de son corps. En cas de douleur inhabituelle, on arrête le mouvement et on en parle à l’enseignante.</p>
+</div>
+</section>
+
+<section>
+<div class="columns">
+<div>
+<p class="kicker">Un studio à taille humaine</p>
+<h2>Apprendre dans une ambiance qui vous ressemble.</h2>
+<p>À Soulières, à environ 15 minutes d’Épernay, Yog’n Moov vous accueille dans un studio intimiste, loin des grandes salles impersonnelles.</p>
+<p>Les groupes de 4 à 5 personnes permettent de bénéficier d’un accompagnement attentif et de partager une activité dans une ambiance détendue. On apprend, on rit, on recommence et on avance ensemble, sans jugement.</p>
+</div>
+<div>
+<p class="kicker">Plusieurs façons de pratiquer</p>
+<h2>À votre rythme et selon vos envies.</h2>
+<p>Vous pouvez découvrir la pole en cours collectif ou choisir un format plus personnalisé selon vos besoins :</p>
+<ul class="content-list">
+<li>Cours collectifs au studio.</li>
+<li>Coaching individuel.</li>
+<li>Séances en duo ou semi-privées.</li>
+<li>Ateliers parent-enfant selon les dates proposées.</li>
+<li>Stages à domicile et coachings spécifiques, selon les possibilités.</li>
+<li>Accompagnement autour de la technique et de la pole sport.</li>
+</ul>
+<a class="btn" href="coaching.html">Voir les coachings</a>
+<a class="btn alt" href="cours.html">Voir les cours</a>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<p class="kicker">Prêt·e à essayer ?</p>
+<h2>Votre première séance commence par un message.</h2>
+<p>Une question, une hésitation ou envie de connaître les prochains créneaux ? Contactez-moi pour échanger et réserver votre séance découverte.</p>
+<a class="btn" href="tel:+33632514950">Appeler le 06 32 51 49 50</a>
+<a class="btn alt" href="https://wa.me/33632514950" target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp</a>
+<p class="hero-note">Yog’n Moov Pole Dance · Soulières (51130), près d’Épernay</p>
+</section>
+
+<div class="band">
+<p><strong>Les places sont limitées.</strong></p>
+<p>Contactez-moi pour connaître les disponibilités et trouver le format qui vous convient.</p>
+</div>
+
+</main>
+
+<footer>
+<p class="footer-brand">Yog’n Moov</p>
+<p>Pole dance · Soulières (51130), près d’Épernay</p>
+<p><a href="tel:+33632514950">06 32 51 49 50</a> · <a href="mailto:poledancejulie@gmail.com">Envoyer un e-mail</a></p>
+<div class="footer-yoga">
+<h3>Yog’n Moov · Yoga, Pilates et méditation</h3>
+<p>Retrouvez également les activités de yoga, Pilates et méditation sur le site dédié.</p>
+<a href="https://www.yognmoov.fr" target="_blank" rel="noopener noreferrer">Visiter www.yognmoov.fr →</a>
+</div>
+<p><a href="https://www.facebook.com/share/17JPoeD2sn/">Facebook</a> · <a href="https://instagram.com/yognmoov_julie?rpxt=eHNpNGN0bmpyZjcz">Instagram</a> · <a href="https://www.tiktok.com/@yogn.moov?_r=1&_t=ZN-9AP1Zvefj8Q">TikTok</a></p>
+<p><a href="index.html">Accueil</a> · <a href="contact.html">Contact</a></p>
+</footer>
+</body>
+</html>
