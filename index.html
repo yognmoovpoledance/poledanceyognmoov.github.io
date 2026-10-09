@@ -1,14 +1,301 @@
 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Yog’n Moov | Pole dance près d’Épernay</title>
-  <meta name="description" content="Yog’n Moov, studio de pole dance à Soulières près d’Épernay. Cours pour femmes et hommes, petits groupes, aucun prérequis et créneaux possibles de pole sport.">
+<title>Yog’n Moov – Pole Dance près d’Épernay</title>
+<meta name="description" content="Yog’n Moov, studio de pole dance à Soulières près d’Épernay. Cours pour femmes et hommes, petits groupes, aucun prérequis et possibilités de pole sport.">
 
-  <link rel="stylesheet" href="style.css">
+<style>
+:root {
+  --noir: #111110;
+  --noir-doux: #1c1b19;
+  --or: #c7a45b;
+  --or-clair: #e5ce93;
+  --ecru: #f5f0e6;
+  --blanc: #fffdf8;
+  --gris: #c8c1b5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--ecru);
+  color: var(--noir);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+header {
+  background: var(--noir);
+  color: var(--ecru);
+  padding: 22px 6%;
+  border-bottom: 2px solid var(--or);
+}
+
+.logo {
+  display: inline-block;
+  color: var(--or-clair);
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--ecru);
+  font-weight: normal;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-top: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--ecru);
+  font-size: 13px;
+}
+
+nav a:hover,
+footer a:hover {
+  color: var(--or-clair);
+}
+
+section {
+  padding: 65px 8%;
+}
+
+.hero {
+  background: var(--noir);
+  color: var(--ecru);
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 45px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  max-height: 540px;
+  object-fit: cover;
+  border: 1px solid var(--or);
+}
+
+.kicker {
+  color: var(--or);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(38px, 5vw, 66px);
+  margin: 18px 0;
+}
+
+h2 {
+  font-size: clamp(30px, 4vw, 43px);
+  margin-top: 10px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+.lead {
+  font-size: 17px;
+  color: var(--gris);
+}
+
+.hero-note {
+  font-size: 12px;
+  color: var(--or-clair);
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--or);
+  color: var(--noir);
+  text-decoration: none;
+  padding: 13px 22px;
+  margin: 8px 8px 8px 0;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid var(--or);
+  transition: .2s;
+}
+
+.btn:hover {
+  background: var(--or-clair);
+}
+
+.btn.alt {
+  background: transparent;
+  color: var(--or-clair);
+}
+
+.btn.alt:hover {
+  background: var(--or);
+  color: var(--noir);
+}
+
+.band {
+  background: var(--or);
+  color: var(--noir);
+  text-align: center;
+  padding: 28px 8%;
+}
+
+.band p {
+  margin: 5px 0;
+}
+
+.band a {
+  font-weight: bold;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin-top: 28px;
+}
+
+.chips li {
+  border: 1px solid var(--or);
+  padding: 8px 15px;
+  font-size: 13px;
+}
+
+.doors {
+  background: var(--noir);
+  color: var(--ecru);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.door {
+  padding: 30px;
+  border: 1px solid var(--or);
+  text-decoration: none;
+  transition: .2s;
+}
+
+.door:hover {
+  background: var(--noir-doux);
+}
+
+.door h2 {
+  color: var(--or-clair);
+}
+
+.door.alt {
+  background: #e9e0cf;
+  color: var(--noir);
+}
+
+.door.alt h2 {
+  color: #7c5d25;
+}
+
+.soft {
+  background: var(--blanc);
+  border-top: 1px solid #dfd3b9;
+  border-bottom: 1px solid #dfd3b9;
+}
+
+footer {
+  background: var(--noir);
+  color: var(--gris);
+  text-align: center;
+  padding: 40px 7%;
+  font-size: 13px;
+  border-top: 3px solid var(--or);
+}
+
+footer strong {
+  color: var(--or-clair);
+  font-family: Georgia, serif;
+  font-size: 24px;
+}
+
+footer a {
+  color: var(--ecru);
+}
+
+@media (max-width: 760px) {
+  header {
+    padding: 20px 6%;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  nav {
+    gap: 12px 15px;
+  }
+
+  .hero,
+  .doors {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 45px 7%;
+    gap: 25px;
+  }
+
+  .hero img {
+    max-height: 420px;
+  }
+
+  section {
+    padding: 45px 7%;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -20,7 +307,7 @@
   </a>
 
   <nav>
-    <a href="index.html" aria-current="page">Accueil</a>
+    <a href="index.html">Accueil</a>
     <a href="pole.html">La pole</a>
     <a href="cours.html">Les cours</a>
     <a href="coaching.html">Coaching</a>
@@ -34,149 +321,133 @@
 
 <main>
 
-  <section class="hero">
-    <div>
-      <p class="kicker">LA POLE DANCE, AUTREMENT</p>
+<section class="hero">
+  <div>
+    <p class="kicker">La pole dance, autrement</p>
+    <h1>Osez découvrir tout ce dont votre corps est capable.</h1>
 
-      <h1>Osez découvrir tout ce dont votre corps est capable.</h1>
-
-      <p class="lead">
-        Pas besoin d’être souple, musclé ou expérimenté.
-        Venez comme vous êtes, progressez à votre rythme
-        et découvrez une activité aussi sportive qu’épanouissante.
-      </p>
-
-      <p>
-        <a class="btn" href="cours.html">Découvrir les cours</a>
-        <a class="btn alt" href="contact.html">Me contacter</a>
-      </p>
-
-      <p class="hero-note">
-        Femmes et hommes · Aucun prérequis · Tous les niveaux
-      </p>
-    </div>
-
-    <img
-      src="images/studio-assise.jpg"
-      alt="Le studio intimiste Yog’n Moov à Soulières"
-      width="700"
-      height="1489">
-  </section>
-
-  <section class="band">
-    <p>
-      <strong>Un studio à taille humaine.</strong>
-      4 à 5 personnes maximum par cours, pour apprendre,
-      progresser et être accompagné dans une ambiance bienveillante.
-    </p>
-  </section>
-
-  <section>
-    <p class="kicker">BIEN PLUS QU’UNE FIGURE</p>
-    <h2>Un espace pour bouger, oser et progresser.</h2>
-
-    <p>
-      Chez Yog’n Moov, pas de compétition entre élèves ni de pression
-      sur les performances ou l’apparence. L’objectif est de prendre
-      confiance, de développer sa force, sa mobilité et sa coordination,
-      tout en se faisant plaisir.
+    <p class="lead">
+      Pas besoin d’être souple, musclé ou expérimenté.
+      Venez comme vous êtes, progressez à votre rythme et
+      découvrez une activité aussi sportive qu’épanouissante.
     </p>
 
-    <ul class="chips">
-      <li>Force</li>
-      <li>Mobilité</li>
-      <li>Coordination</li>
-      <li>Équilibre</li>
-      <li>Souplesse</li>
-      <li>Confiance en soi</li>
-    </ul>
-  </section>
+    <a class="btn" href="cours.html">Découvrir les cours</a>
+    <a class="btn alt" href="contact.html">Me contacter</a>
 
-  <section class="doors">
-    <a class="door" href="cours.html">
-      <p class="kicker">POUR DÉCOUVRIR</p>
-      <h2>Les cours au studio</h2>
-      <p>
-        Des petits groupes, un accompagnement personnalisé
-        et une ambiance conviviale à Soulières.
-      </p>
-    </a>
-
-    <a class="door alt" href="coaching.html">
-      <p class="kicker">POUR ALLER PLUS LOIN</p>
-      <h2>Les coachings</h2>
-      <p>
-        Des séances individuelles, en duo ou à distance,
-        adaptées à vos envies et à vos objectifs.
-      </p>
-    </a>
-  </section>
-
-  <section class="soft">
-    <p class="kicker">À CHACUN SA PRATIQUE</p>
-    <h2>Envie d’une approche plus sportive ?</h2>
-
-    <p>
-      Des créneaux spécifiques de <strong>pole sport</strong> peuvent
-      être envisagés pour travailler davantage la technique,
-      la force, les figures et les enchaînements sportifs.
-      Parlez-moi de vos envies pour étudier les possibilités.
+    <p class="hero-note">
+      Femmes et hommes · Aucun prérequis · Tous les niveaux
     </p>
+  </div>
 
-    <p>
-      Cours collectifs, privés, semi-privés, duo, parent-enfant,
-      stages à domicile ou coaching avec podium : plusieurs formats
-      sont possibles selon vos besoins.
-    </p>
+  <img
+    src="images/studio-assise.jpg"
+    alt="Studio de pole dance Yog’n Moov à Soulières">
+</section>
 
-    <p>
-      <a class="btn" href="contact.html">Parlons de votre projet</a>
-    </p>
-  </section>
+<div class="band">
+  <p><strong>Un studio à taille humaine.</strong></p>
+  <p>Petits groupes de 4 à 5 personnes · Convivialité · Bienveillance</p>
+</div>
 
-  <section>
-    <p class="kicker">VOTRE STUDIO</p>
-    <h2>Une parenthèse rien qu’à vous.</h2>
+<section>
+  <p class="kicker">Bien plus qu’une figure</p>
+  <h2>Un espace pour bouger, oser et progresser.</h2>
 
-    <p>
-      À Soulières, à environ 15 minutes d’Épernay, Yog’n Moov
-      vous accueille dans un studio intimiste, loin des grandes salles
-      impersonnelles. Ici, on apprend, on rit, on recommence et on
-      avance ensemble, sans jugement.
-    </p>
+  <p>
+    Chez Yog’n Moov, pas de compétition entre élèves ni de pression
+    sur les performances ou l’apparence. L’objectif est de prendre
+    confiance, de développer sa force, sa mobilité et sa coordination,
+    tout en se faisant plaisir.
+  </p>
 
-    <p>
-      <a class="btn alt" href="studio.html">Découvrir le studio</a>
-    </p>
-  </section>
+  <ul class="chips">
+    <li>Force</li>
+    <li>Mobilité</li>
+    <li>Coordination</li>
+    <li>Équilibre</li>
+    <li>Souplesse</li>
+    <li>Confiance en soi</li>
+  </ul>
+</section>
 
-  <section class="band">
+<section class="doors">
+  <a class="door" href="cours.html">
+    <p class="kicker">Pour découvrir</p>
+    <h2>Les cours au studio</h2>
     <p>
-      <strong>Les places sont limitées.</strong>
-      Contactez-moi pour connaître les créneaux disponibles
-      et trouver la formule qui vous correspond.
+      Des petits groupes, un accompagnement attentif et une ambiance
+      conviviale à Soulières.
     </p>
+    <p>Découvrir les cours →</p>
+  </a>
+
+  <a class="door alt" href="coaching.html">
+    <p class="kicker">Pour aller plus loin</p>
+    <h2>Les coachings</h2>
     <p>
-      <a href="tel:+33632514950">06 32 51 49 50</a>
-      ·
-      <a href="https://wa.me/33632514950">Écrire sur WhatsApp</a>
+      Séances individuelles, en duo ou à distance, adaptées
+      à vos envies et à vos objectifs.
     </p>
-  </section>
+    <p>Découvrir les coachings →</p>
+  </a>
+</section>
+
+<section class="soft">
+  <p class="kicker">À chacun sa pratique</p>
+  <h2>Envie d’une approche plus sportive ?</h2>
+
+  <p>
+    Des créneaux spécifiques de <strong>pole sport</strong> peuvent
+    être envisagés pour travailler davantage la technique, la force,
+    les figures et les enchaînements sportifs.
+  </p>
+
+  <p>
+    Cours collectifs, privés, semi-privés, duo, parent-enfant,
+    stages à domicile ou coaching avec podium : plusieurs formats
+    sont possibles selon vos besoins.
+  </p>
+
+  <a class="btn" href="contact.html">Parlons de votre projet</a>
+</section>
+
+<section>
+  <p class="kicker">Votre studio</p>
+  <h2>Une parenthèse rien qu’à vous.</h2>
+
+  <p>
+    À Soulières, à environ 15 minutes d’Épernay, Yog’n Moov vous
+    accueille dans un studio intimiste, loin des grandes salles
+    impersonnelles. Ici, on apprend, on rit, on recommence et on
+    avance ensemble, sans jugement.
+  </p>
+
+  <a class="btn" href="studio.html">Découvrir le studio</a>
+</section>
+
+<div class="band">
+  <p><strong>Les places sont limitées.</strong></p>
+  <p>Contactez-moi pour connaître les créneaux disponibles.</p>
+  <p>
+    <a href="tel:+33632514950">06 32 51 49 50</a>
+    ·
+    <a href="https://wa.me/33632514950">Écrire sur WhatsApp</a>
+  </p>
+</div>
 
 </main>
 
 <footer>
-  <p><strong>Yog’n Moov</strong> · Pole dance</p>
-  <p>Soulières (51130), à environ 15 minutes d’Épernay</p>
+  <p><strong>Yog’n Moov</strong></p>
+  <p>Pole dance · Soulières (51130), près d’Épernay</p>
   <p>
     <a href="tel:+33632514950">06 32 51 49 50</a>
     ·
     <a href="mailto:poledancejulie@gmail.com">Envoyer un e-mail</a>
   </p>
 
-  <p>
-    <a href="https://www.yognmoov.fr">Yoga, Pilates et méditation</a>
-  </p>
+  <p><a href="https://www.yognmoov.fr">Yoga, Pilates et méditation</a></p>
 
   <p>
     <a href="https://www.facebook.com/share/17JPoeD2sn/">Facebook</a>
@@ -185,10 +456,7 @@
     ·
     <a href="https://www.tiktok.com/@yogn.moov?_r=1&_t=ZN-9AP1Zvefj8Q">TikTok</a>
   </p>
-
-  <p>Une pratique sportive adaptée à chacun.</p>
 </footer>
 
 </body>
 </html>
-
