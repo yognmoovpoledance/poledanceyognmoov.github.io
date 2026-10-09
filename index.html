@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Yog’n Moov | Pole dance près d’Épernay</title>
-
-  <meta name="description" content="Yog’n Moov, studio de pole dance à Soulières près d’Épernay. Cours en petits groupes, aucun prérequis, coachings privés et pole sport.">
-
+  <meta name="description" content="Yog’n Moov, studio de pole dance à Soulières près d’Épernay. Cours en petits groupes, aucun prérequis, coachings et pole sport.">
   <meta name="robots" content="index, follow">
 
   <style>
@@ -52,20 +50,24 @@
 
     .logo {
       display: inline-block;
-      color: var(--gold-light);
       text-decoration: none;
-      font-family: Georgia, serif;
-      font-size: 30px;
-      font-weight: bold;
     }
 
-    .logo span {
+    .logo img {
       display: block;
+      width: 190px;
+      max-width: 100%;
+      height: auto;
+      max-height: 100px;
+      object-fit: contain;
+    }
+
+    .brand-caption {
+      display: block;
+      margin-top: 8px;
       color: var(--pink);
-      font-family: Arial, sans-serif;
       font-size: 10px;
       letter-spacing: 4px;
-      font-weight: normal;
     }
 
     nav {
@@ -105,6 +107,7 @@
       width: 100%;
       max-height: 540px;
       object-fit: cover;
+      object-position: center;
       border: 1px solid var(--gold);
     }
 
@@ -258,22 +261,29 @@
       border-top: 3px solid var(--gold);
     }
 
-    footer strong {
-      color: var(--gold-light);
-      font-family: Georgia, serif;
-      font-size: 26px;
-    }
-
     footer a {
       color: var(--pink);
     }
 
+    .footer-brand {
+      color: var(--gold-light);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      font-weight: bold;
+    }
+
     .footer-yoga {
       margin: 28px auto 20px;
-      padding: 20px;
+      padding: 22px 15px;
       max-width: 520px;
       border-top: 1px solid var(--gold);
       border-bottom: 1px solid var(--gold);
+    }
+
+    .footer-yoga h3 {
+      color: var(--gold-light);
+      font-size: 23px;
+      margin: 5px 0 10px;
     }
 
     .footer-yoga a {
@@ -293,8 +303,8 @@
         padding: 20px 6%;
       }
 
-      .logo {
-        font-size: 26px;
+      .logo img {
+        width: 165px;
       }
 
       nav {
@@ -329,9 +339,12 @@
 <body>
 
 <header>
-  <a class="logo" href="index.html">
-    Yog’n Moov
-    <span>POLE DANCE · SOULIÈRES</span>
+  <a class="logo" href="index.html" aria-label="Yog’n Moov - Accueil">
+    <img
+      src="logo_yognmoov_noir_transparent.png"
+      alt="Logo Yog’n Moov"
+    >
+    <span class="brand-caption">POLE DANCE · SOULIÈRES</span>
   </a>
 
   <nav>
@@ -370,7 +383,7 @@
     </div>
 
     <img
-      src="images/studio-assise.jpg"
+      src="studio-assise.jpg"
       alt="Le studio de pole dance Yog’n Moov à Soulières"
     >
   </section>
@@ -485,7 +498,7 @@
 </main>
 
 <footer>
-  <p><strong>Yog’n Moov</strong></p>
+  <p class="footer-brand">Yog’n Moov</p>
 
   <p>Pole dance · Soulières (51130), près d’Épernay</p>
 
@@ -496,8 +509,11 @@
   </p>
 
   <div class="footer-yoga">
-    <p><strong>Yog’n Moov · Yoga, Pilates et méditation</strong></p>
-    <p>Retrouvez également toutes les activités bien-être sur le site dédié.</p>
+    <h3>Yog’n Moov · Yoga, Pilates et méditation</h3>
+    <p>
+      Retrouvez également mes activités de yoga, Pilates et méditation
+      sur le site dédié.
+    </p>
     <a href="https://www.yognmoov.fr" target="_blank" rel="noopener noreferrer">
       Visiter www.yognmoov.fr →
     </a>
@@ -514,4 +530,3 @@
 
 </body>
 </html>
-
