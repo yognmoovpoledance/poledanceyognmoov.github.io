@@ -1,24 +1,23 @@
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Coaching pole dance personnalisé | Yog'n Moov</title>
-
-  <meta name="description" content="Coaching personnalisé de pole dance à Soulières, près d'Épernay, ou à distance en visio. Cours individuels, duo et accompagnement adapté à vos objectifs.">
+  <title>Coaching personnalisé | Yog'n Moov Pole Dance</title>
+  <meta name="description" content="Coaching de pole dance personnalisé à Soulières près d'Épernay, en duo, à domicile ou en visio. Progressez à votre rythme avec Yog'n Moov.">
 
   <link rel="stylesheet" href="style.css">
 
   <style>
     :root {
       --noir: #171615;
-      --or: #c5a46d;
-      --creme: #f8f4ed;
-      --rose: #ead8d4;
-      --texte: #302d29;
+      --dore: #c5a46d;
+      --bordeaux: #873650;
+      --creme: #f8f1e6;
+      --blanc-casse: #e8e1d8;
+      --bordure: #e6d9c7;
     }
 
     * {
@@ -32,123 +31,166 @@
     body {
       margin: 0;
       background: var(--creme);
-      color: var(--texte);
+      color: var(--noir);
       font-family: "Nunito Sans", Arial, sans-serif;
       line-height: 1.7;
     }
 
-    a {
+    /* EN-TÊTE : logo et nom côte à côte */
+
+    .site-header {
+      background: var(--noir);
+      color: var(--creme);
+      border-bottom: 3px solid var(--dore);
+      padding: 30px 5% 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      max-width: 1180px;
+      margin: 0 auto;
+      text-decoration: none;
       color: inherit;
     }
 
-    header {
-      background: var(--noir);
-      color: white;
-      padding: 22px 18px;
-      text-align: center;
-      border-bottom: 3px solid var(--or);
-    }
-
-    .logo-wrap {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 132px;
-      height: 132px;
-      padding: 8px;
-      margin: 0 auto 14px;
+    .brand-logo {
+      flex: 0 0 148px;
+      width: 148px;
+      height: 148px;
       border-radius: 50%;
-      background: white;
-      border: 2px solid var(--or);
+      background: #fff;
+      border: 2px solid var(--dore);
+      padding: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 14px rgba(197, 164, 109, 0.2);
     }
 
-    .logo-wrap img {
-      display: block;
+    .brand-logo img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       border-radius: 50%;
+      display: block;
     }
 
-    nav {
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-style: italic;
+      line-height: 1.2;
+      color: #fff;
+      margin: 0;
+    }
+
+    .brand-subtitle {
+      color: var(--dore);
+      font-size: 1rem;
+      letter-spacing: 5px;
+      margin-top: 5px;
+    }
+
+    .main-nav {
+      max-width: 1180px;
+      margin: 42px auto 0;
+      padding: 18px 0 24px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px 22px;
-      margin-top: 15px;
+      align-items: center;
+      gap: 18px 26px;
     }
 
-    nav a {
-      color: white;
+    .main-nav a {
+      color: var(--creme);
       text-decoration: none;
-      font-size: 0.94rem;
+      font-size: 1.05rem;
+      padding-bottom: 7px;
+      border-bottom: 3px solid transparent;
     }
 
-    nav a:hover,
-    nav a[aria-current="page"] {
-      color: var(--or);
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+      color: var(--bordeaux);
+      border-bottom-color: var(--bordeaux);
     }
+
+    /* CONTENU */
 
     main {
-      width: min(100% - 32px, 1050px);
+      width: 100%;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 34px 0 55px;
+      padding: 38px 24px 60px;
     }
 
     h1, h2, h3 {
       font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.25;
+      line-height: 1.3;
     }
 
     h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      margin: 0 0 18px;
-      color: var(--creme);
+      color: var(--bordeaux);
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-weight: normal;
+      text-align: center;
+      margin: 20px auto 26px;
+      max-width: 800px;
+      overflow-wrap: break-word;
     }
 
     h2 {
-      font-size: clamp(1.6rem, 4vw, 2.2rem);
       color: var(--noir);
-      margin: 0 0 18px;
+      font-size: clamp(1.7rem, 4vw, 2.3rem);
+      font-weight: normal;
+      text-align: center;
+      margin: 0 auto 18px;
     }
 
     h3 {
-      font-size: 1.35rem;
-      color: var(--noir);
+      font-size: 1.4rem;
       margin: 0 0 12px;
+      color: var(--noir);
     }
 
     p {
-      margin: 0 0 14px;
+      margin: 0 0 16px;
     }
 
     .hero {
       background: var(--noir);
-      color: white;
-      border: 1px solid var(--or);
-      border-radius: 18px;
-      padding: 38px 24px;
-      text-align: center;
-      margin-bottom: 42px;
+      color: var(--blanc-casse);
+      border-radius: 4px;
+      padding: 48px 34px;
+      margin-bottom: 48px;
+      border-top: 1px solid rgba(197, 164, 109, 0.35);
     }
 
     .eyebrow {
-      color: var(--or);
+      text-align: center;
+      color: var(--dore);
+      font-size: 0.95rem;
+      letter-spacing: 4px;
+      font-weight: bold;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.78rem;
-      font-weight: 800;
-      margin-bottom: 12px;
+      margin-bottom: 18px;
     }
 
     .hero-intro {
       max-width: 760px;
-      margin: 0 auto;
-      padding: 24px 30px;
-      border: 1px solid rgba(197, 164, 109, 0.65);
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
+      width: 100%;
+      margin: 28px auto 0;
+      padding: 26px 30px;
+      border: 1px solid rgba(197, 164, 109, 0.55);
+      border-radius: 10px;
       text-align: left;
+      background: rgba(255, 255, 255, 0.025);
       overflow-wrap: break-word;
     }
 
@@ -157,84 +199,87 @@
     }
 
     .hero-intro strong {
-      color: var(--or);
+      color: var(--dore);
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
-      margin-top: 24px;
+      gap: 14px;
+      margin-top: 28px;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 20px;
-      border-radius: 30px;
       text-decoration: none;
-      font-weight: 800;
-      border: 1px solid var(--or);
-      transition: transform 0.2s, background 0.2s;
+      text-align: center;
+      padding: 12px 22px;
+      border-radius: 30px;
+      font-weight: bold;
+      border: 1px solid var(--dore);
+      transition: 0.2s ease;
+    }
+
+    .btn-gold {
+      color: var(--noir);
+      background: var(--dore);
+    }
+
+    .btn-outline {
+      color: var(--creme);
+      background: transparent;
     }
 
     .btn:hover {
       transform: translateY(-2px);
     }
 
-    .btn-gold {
-      background: var(--or);
-      color: var(--noir);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: white;
-    }
-
     .section {
-      margin-top: 44px;
+      margin: 48px 0;
     }
 
     .section-intro {
       max-width: 760px;
-      margin-bottom: 24px;
+      margin: 0 auto 26px;
+      text-align: center;
     }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
+      gap: 20px;
     }
 
     .card {
       min-width: 0;
-      padding: 25px;
-      background: white;
-      border: 1px solid #e2d6c5;
-      border-radius: 15px;
-      box-shadow: 0 5px 18px rgba(23, 22, 21, 0.04);
+      background: #fffdf9;
+      border: 1px solid var(--bordure);
+      border-radius: 12px;
+      padding: 26px;
+    }
+
+    .card-label {
+      display: inline-block;
+      color: var(--bordeaux);
+      background: #f1e3e5;
+      padding: 4px 12px;
+      border-radius: 25px;
+      font-size: 0.82rem;
+      font-weight: bold;
+      margin-bottom: 12px;
     }
 
     .card p:last-child {
       margin-bottom: 0;
     }
 
-    .card-label {
-      display: inline-block;
-      color: #775b31;
-      background: #f3eadb;
-      border-radius: 30px;
-      padding: 4px 11px;
-      margin-bottom: 12px;
-      font-size: 0.8rem;
-      font-weight: 800;
-    }
-
     .steps {
-      padding: 26px;
-      background: var(--rose);
-      border-radius: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+      background: #eee2d3;
+      padding: 28px 32px;
+      border-radius: 12px;
     }
 
     .steps ol {
@@ -243,7 +288,8 @@
     }
 
     .steps li {
-      margin-bottom: 10px;
+      padding-left: 5px;
+      margin-bottom: 12px;
     }
 
     .steps li:last-child {
@@ -251,21 +297,21 @@
     }
 
     .contact-box {
-      margin-top: 44px;
-      padding: 32px 22px;
+      margin-top: 50px;
       background: var(--noir);
-      color: white;
+      color: var(--blanc-casse);
       text-align: center;
-      border-radius: 18px;
-      border: 1px solid var(--or);
+      padding: 38px 24px;
+      border-top: 3px solid var(--dore);
+      border-radius: 4px;
     }
 
     .contact-box h2 {
-      color: white;
+      color: var(--creme);
     }
 
     .contact-box p {
-      max-width: 650px;
+      max-width: 680px;
       margin: 0 auto 16px;
     }
 
@@ -274,39 +320,87 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin-top: 22px;
+      margin-top: 25px;
     }
 
     footer {
       background: var(--noir);
-      color: #eee5d8;
+      color: var(--blanc-casse);
       text-align: center;
-      padding: 26px 18px;
-      border-top: 3px solid var(--or);
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: var(--or);
-      text-decoration: none;
+      padding: 28px 18px;
+      border-top: 2px solid var(--dore);
+      font-size: 0.92rem;
     }
 
     footer p {
       margin: 6px 0;
     }
 
+    footer a {
+      color: var(--dore);
+      text-decoration: none;
+    }
+
+    /* ADAPTATION AUX TÉLÉPHONES */
+
     @media (max-width: 650px) {
+      .site-header {
+        padding: 24px 18px 0;
+      }
+
+      .brand {
+        gap: 18px;
+      }
+
+      .brand-logo {
+        flex-basis: 112px;
+        width: 112px;
+        height: 112px;
+        padding: 5px;
+      }
+
+      .brand-name {
+        font-size: clamp(1.6rem, 6vw, 2.3rem);
+      }
+
+      .brand-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+      }
+
+      .main-nav {
+        margin-top: 38px;
+        padding: 12px 0 24px;
+        gap: 16px 20px;
+      }
+
+      .main-nav a {
+        font-size: 1rem;
+      }
+
       main {
-        width: min(100% - 24px, 1050px);
-        padding-top: 22px;
+        padding: 24px 12px 40px;
       }
 
       .hero {
-        padding: 28px 14px;
+        padding: 34px 18px;
+        margin-bottom: 34px;
+      }
+
+      .eyebrow {
+        font-size: 0.78rem;
+        letter-spacing: 3px;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+        padding: 0 4px;
+        margin: 18px auto 22px;
       }
 
       .hero-intro {
         padding: 22px 18px;
+        margin-top: 24px;
       }
 
       .cards {
@@ -314,16 +408,50 @@
       }
 
       .card {
-        padding: 22px;
+        padding: 23px;
       }
 
-      .logo-wrap {
-        width: 112px;
-        height: 112px;
+      .steps {
+        padding: 24px 20px;
       }
 
-      nav {
-        gap: 10px 15px;
+      .contact-box {
+        padding: 32px 18px;
+      }
+
+      .hero-actions .btn,
+      .contact-links .btn {
+        width: 100%;
+        max-width: 340px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .brand {
+        gap: 12px;
+      }
+
+      .brand-logo {
+        flex-basis: 92px;
+        width: 92px;
+        height: 92px;
+      }
+
+      .brand-name {
+        font-size: 1.55rem;
+      }
+
+      .brand-subtitle {
+        font-size: 0.66rem;
+        letter-spacing: 2px;
+      }
+
+      .main-nav {
+        gap: 14px;
+      }
+
+      .hero-intro {
+        padding: 20px 15px;
       }
     }
   </style>
@@ -331,18 +459,27 @@
 
 <body>
 
-<header>
-  <a class="logo-wrap" href="index.html" aria-label="Accueil Yog'n Moov">
-    <img src="logo-yognmoov.png" alt="Logo Yog'n Moov Yoga Pilates Pole Dance">
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Accueil Yog'n Moov Pole Dance">
+    <span class="brand-logo">
+      <img src="logo-yognmoov.png" alt="Logo Yog'n Moov">
+    </span>
+
+    <span class="brand-text">
+      <span class="brand-name">Yog'n Moov</span>
+      <span class="brand-subtitle">POLE DANCE</span>
+    </span>
   </a>
 
-  <nav aria-label="Navigation principale">
+  <nav class="main-nav" aria-label="Navigation principale">
     <a href="index.html">Accueil</a>
-    <a href="pole.html">La pole dance</a>
-    <a href="cours.html">Les cours</a>
-    <a href="tarifs.html">Les tarifs</a>
+    <a href="pole.html">La pole</a>
+    <a href="cours.html">Cours</a>
     <a href="coaching.html" aria-current="page">Coaching</a>
-    <a href="studio.html">Le studio</a>
+    <a href="tarifs.html">Tarifs</a>
+    <a href="avis.html">Avis</a>
+    <a href="julie.html">Julie</a>
+    <a href="studio.html">Studio</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
@@ -356,20 +493,20 @@
 
     <div class="hero-intro">
       <p>
-        Vous souhaitez progresser en pole dance, dépasser une difficulté,
-        gagner en confiance ou travailler un mouvement en particulier ?
+        Envie de travailler une figure, de consolider vos bases ou de
+        prendre confiance sur la barre ? Le coaching permet de bénéficier
+        d'un accompagnement adapté à vos besoins.
       </p>
+
       <p>
-        Le coaching permet de bénéficier d'un accompagnement adapté à votre
-        expérience, à vos envies et à votre rythme, dans un cadre bienveillant.
+        Chez Yog'n Moov, chacun et chacune peut trouver sa place.
+        Les coachings sont ouverts à tous, quels que soient votre parcours,
+        votre expérience ou vos objectifs.
       </p>
+
       <p>
-        <strong>Pas de compétition ni de comparaison :</strong>
-        nous travaillons ensemble sur ce qui compte pour vous.
-      </p>
-      <p>
-        Les hommes comme les femmes sont les bienvenus. Aucun besoin de
-        correspondre à un profil particulier pour venir pratiquer.
+        <strong>Pas de compétition, pas de comparaison :</strong>
+        nous avançons ensemble, à votre rythme, dans un cadre bienveillant.
       </p>
     </div>
 
@@ -381,74 +518,76 @@
 
   <section class="section" id="details">
     <h2>Un coaching adapté à vos envies</h2>
+
     <p class="section-intro">
-      Chaque séance se construit en fonction de vos besoins : apprendre,
-      revoir les bases, améliorer votre technique ou simplement prendre
-      le temps de pratiquer dans un cadre plus individualisé.
+      En individuel, en duo, à domicile ou en visio, nous choisissons
+      ensemble une formule qui correspond à votre pratique et à vos envies.
     </p>
 
     <div class="cards">
 
       <article class="card">
         <span class="card-label">Individuel</span>
-        <h3>Coaching personnalisé</h3>
+        <h3>Un accompagnement personnalisé</h3>
         <p>
-          Un cours rien que pour vous, pour avancer à votre rythme,
-          recevoir des conseils individualisés et travailler les mouvements
-          qui vous intéressent.
+          Profitez d'une séance rien que pour vous afin de travailler
+          vos objectifs, revoir certains mouvements et bénéficier de
+          conseils adaptés à votre rythme.
         </p>
       </article>
 
       <article class="card">
         <span class="card-label">À deux</span>
-        <h3>Coaching en duo</h3>
+        <h3>Le coaching en duo</h3>
         <p>
-          Venez avec un proche, un partenaire ou une amie. Vous partagez
-          la séance tout en bénéficiant de conseils adaptés à chacun.
+          Partagez une séance avec un proche, un partenaire ou une amie.
+          Chacun peut avancer à son rythme tout en profitant de ce moment
+          à deux.
         </p>
       </article>
 
       <article class="card">
         <span class="card-label">Technique</span>
-        <h3>Travailler un objectif précis</h3>
+        <h3>Travailler une figure précise</h3>
         <p>
-          Nous ciblons ensemble les éléments à améliorer : placement,
-          coordination, fluidité, transitions ou compréhension d'une figure
-          adaptée à votre niveau.
+          Placement, coordination, transitions, fluidité ou découverte
+          d'un nouveau mouvement : nous ciblons ensemble les points
+          que vous souhaitez travailler.
         </p>
       </article>
 
       <article class="card">
         <span class="card-label">Confiance</span>
-        <h3>Prendre confiance en soi</h3>
+        <h3>Oser et progresser à son rythme</h3>
         <p>
-          Apprendre à mieux connaître ses capacités, oser essayer,
-          prendre son temps et apprécier ses progrès sans se comparer
-          aux autres.
+          Prenez le temps d'apprivoiser la barre, de découvrir vos
+          capacités et de reconnaître vos progrès, sans pression
+          ni comparaison.
         </p>
       </article>
 
       <article class="card">
         <span class="card-label">À domicile</span>
-        <h3>Coaching chez vous</h3>
+        <h3>Un coaching chez vous</h3>
         <p>
-          Vous possédez une barre chez vous ? Selon votre installation
-          et les possibilités de déplacement, nous pouvons étudier
-          un accompagnement à domicile.
+          Vous avez une barre chez vous ? Selon votre installation,
+          les conditions de sécurité et la distance, nous pouvons
+          envisager une séance à domicile.
         </p>
       </article>
 
       <article class="card">
         <span class="card-label">À distance</span>
-        <h3>Coaching en visio</h3>
+        <h3>Le coaching en visio</h3>
         <p>
-          Vous pratiquez chez vous et souhaitez un regard extérieur
-          ou des conseils ? Une séance à distance peut permettre de faire
-          le point sur votre pratique et vos objectifs.
+          Vous pratiquez à la maison et souhaitez des conseils
+          personnalisés ? Une séance en visio peut vous aider à faire
+          le point sur votre technique et vos objectifs.
         </p>
         <p>
-          Les exercices sont adaptés aux conditions de sécurité et aux
-          mouvements qui peuvent être accompagnés à distance.
+          Les mouvements travaillés sont choisis en fonction de votre
+          installation et des conditions de sécurité. Certaines figures
+          ne peuvent pas être encadrées à distance.
         </p>
       </article>
 
@@ -456,24 +595,24 @@
   </section>
 
   <section class="section">
-    <h2>Comment se déroule le coaching ?</h2>
+    <h2>Comment ça se passe ?</h2>
 
     <div class="steps">
       <ol>
         <li>
-          <strong>Vous m'expliquez votre envie.</strong>
-          Nous échangeons sur votre expérience, vos objectifs et vos
-          éventuelles difficultés.
+          <strong>Nous échangeons sur vos envies.</strong>
+          Vous m'expliquez votre expérience, vos objectifs et ce que
+          vous aimeriez travailler.
         </li>
         <li>
-          <strong>Nous définissons une séance adaptée.</strong>
-          Le contenu est ajusté à votre pratique, à vos capacités
+          <strong>Nous préparons votre séance.</strong>
+          Le contenu est adapté à votre pratique, à vos capacités
           et aux conditions de sécurité.
         </li>
         <li>
-          <strong>Vous progressez à votre rythme.</strong>
-          Nous prenons le temps de comprendre les mouvements, de les
-          travailler et d'adapter les exercices si nécessaire.
+          <strong>Nous avançons ensemble.</strong>
+          Nous prenons le temps de travailler les mouvements et
+          d'adapter les exercices selon vos besoins.
         </li>
       </ol>
     </div>
@@ -481,14 +620,14 @@
 
   <section class="contact-box" id="contact">
     <p class="eyebrow">Parlons de votre projet</p>
-    <h2>Quel coaching vous correspond ?</h2>
+    <h2>Envie d'un coaching ?</h2>
+
     <p>
-      Contactez-moi pour me parler de vos envies et voir ensemble
-      quelle formule serait la plus adaptée.
+      Contactez-moi pour m'expliquer ce que vous recherchez.
+      Nous verrons ensemble quelle formule pourrait vous convenir.
     </p>
-    <p>
-      <strong>Yog'n Moov Pole Dance · Soulières, près d'Épernay</strong>
-    </p>
+
+    <p><strong>Yog'n Moov Pole Dance · Soulières, près d'Épernay</strong></p>
 
     <div class="contact-links">
       <a class="btn btn-gold" href="tel:+33632514950">
@@ -497,8 +636,7 @@
 
       <a class="btn btn-outline"
          href="https://wa.me/33632514950"
-         target="_blank"
-         rel="noopener">
+         target="_blank" rel="noopener">
         WhatsApp
       </a>
 
@@ -514,16 +652,12 @@
 <footer>
   <p><strong>Yog'n Moov Pole Dance</strong></p>
   <p>Soulières · près d'Épernay</p>
-  <p>
-    <a href="https://www.yognmoov.fr"
-       target="_blank"
-       rel="noopener">Découvrir Yog'n Moov Yoga & Pilates</a>
-  </p>
-  <p>
-    <a href="contact.html">Contact</a> ·
-    <a href="tarifs.html">Tarifs</a>
-  </p>
+  <p><a href="https://www.yognmoov.fr" target="_blank" rel="noopener">
+    Découvrir Yog'n Moov Yoga & Pilates
+  </a></p>
+  <p><a href="contact.html">Contact</a> · <a href="tarifs.html">Tarifs</a></p>
 </footer>
 
 </body>
 </html>
+
