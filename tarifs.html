@@ -1,23 +1,442 @@
 
 <!DOCTYPE html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tarifs et planning | Yog'n Moov Pole Dance</title><meta name="description" content="Tarifs des cours de pole dance à Soulières : séance 22 €, carte 10 cours 200 €, privé 70 €, duo 40 €, parent-enfant 60 €, coaching à distance 129 €.">
-<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body>
-<header><a class="logo" href="index.html">Yog'n Moov <span>Pole Dance</span></a><nav><a href="index.html">Accueil</a><a href="pole.html">La pole</a><a href="cours.html">Cours</a><a href="coaching.html">Coaching</a><a href="tarifs.html" aria-current="page">Tarifs</a><a href="avis.html">Avis</a><a href="julie.html">Julie</a><a href="studio.html">Studio</a><a href="contact.html">Contact</a></nav></header>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tarifs et planning | Yog’n Moov Pole Dance</title>
+  <meta name="description" content="Découvrez les tarifs des cours de pole dance Yog’n Moov à Soulières, près d’Épernay : cours collectifs, cartes, cours privés, duo, parent-enfant et coaching.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      --tarif-black: #171613;
+      --tarif-gold: #b89a62;
+      --tarif-gold-light: #d8c397;
+      --tarif-cream: #f8f5ef;
+      --tarif-white: #fffdf9;
+      --tarif-text: #292720;
+      --tarif-muted: #716d64;
+      --tarif-border: #e5dccb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--tarif-cream);
+      color: var(--tarif-text);
+      font-family: "Nunito Sans", sans-serif;
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--tarif-black);
+      color: var(--tarif-cream);
+      padding: 22px 7%;
+      border-bottom: 2px solid var(--tarif-gold);
+    }
+
+    header .logo {
+      display: inline-block;
+      color: var(--tarif-gold-light);
+      text-decoration: none;
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    header .logo span {
+      display: block;
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    header nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      margin-top: 18px;
+    }
+
+    header nav a {
+      color: var(--tarif-cream);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s ease;
+    }
+
+    header nav a:hover,
+    header nav a[aria-current="page"] {
+      color: var(--tarif-gold-light);
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    main section {
+      padding: 65px 7%;
+    }
+
+    /* Bandeau principal : texte centré et bien espacé */
+    .tarifs-hero {
+      background: var(--tarif-black);
+      color: var(--tarif-cream);
+      text-align: center;
+      padding: 75px 20px 80px;
+      border-bottom: 3px solid var(--tarif-gold);
+    }
+
+    .tarifs-hero-inner {
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .tarifs-kicker {
+      color: var(--tarif-gold-light);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin: 0 0 18px;
+    }
+
+    .tarifs-hero h1 {
+      color: var(--tarif-cream);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.2;
+      margin: 0 auto 22px;
+      max-width: 760px;
+      text-align: center;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #e3ded4;
+      font-size: 17px;
+      text-align: center;
+    }
+
+    /* Tableau des tarifs */
+    .tarifs-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-top: 60px;
+      padding-bottom: 70px;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 35px;
+    }
+
+    .section-intro h2,
+    .planning h2 {
+      color: var(--tarif-black);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.3;
+      margin: 0 0 16px;
+    }
+
+    .table-wrap {
+      max-width: 850px;
+      margin: 0 auto;
+      overflow-x: auto;
+      border: 1px solid var(--tarif-border);
+      border-radius: 12px;
+      background: var(--tarif-white);
+      box-shadow: 0 12px 35px rgba(34, 29, 20, 0.06);
+    }
+
+    .tarifs-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 16px;
+    }
+
+    .tarifs-table tr:not(:last-child) {
+      border-bottom: 1px solid var(--tarif-border);
+    }
+
+    .tarifs-table th,
+    .tarifs-table td {
+      padding: 20px 26px;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    .tarifs-table th {
+      color: var(--tarif-black);
+      font-weight: 700;
+      width: 55%;
+    }
+
+    .tarifs-table td {
+      color: #7d6338;
+      font-weight: 700;
+    }
+
+    .tarifs-table tr:hover {
+      background: #faf6ed;
+    }
+
+    /* Planning */
+    .planning {
+      background: #eee7da;
+      border-top: 1px solid var(--tarif-border);
+      text-align: center;
+    }
+
+    .planning-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .planning h2 {
+      margin-bottom: 22px;
+    }
+
+    .planning p {
+      color: #514d44;
+      margin: 0 auto 18px;
+    }
+
+    .planning .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 14px 28px;
+      background: var(--tarif-black);
+      color: var(--tarif-cream);
+      border: 1px solid var(--tarif-gold);
+      border-radius: 3px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .planning .btn:hover {
+      background: var(--tarif-gold);
+      color: var(--tarif-black);
+    }
+
+    /* Pied de page */
+    footer {
+      background: var(--tarif-black);
+      color: #d2cbc0;
+      text-align: center;
+      padding: 38px 7%;
+      font-size: 13px;
+      border-top: 2px solid var(--tarif-gold);
+    }
+
+    footer p {
+      margin: 10px auto;
+    }
+
+    footer a {
+      color: var(--tarif-gold-light);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #f0d8ac;
+      text-decoration: underline;
+    }
+
+    /* Adaptation aux téléphones */
+    @media (max-width: 600px) {
+      header {
+        padding: 20px 6%;
+      }
+
+      header nav {
+        gap: 10px 14px;
+      }
+
+      main section {
+        padding: 45px 6%;
+      }
+
+      .tarifs-hero {
+        padding: 55px 12px 60px;
+      }
+
+      .tarifs-hero-inner {
+        padding: 0 10px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .tarifs-table {
+        font-size: 14px;
+      }
+
+      .tarifs-table th,
+      .tarifs-table td {
+        padding: 16px 12px;
+      }
+
+      .tarifs-table th {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a class="logo" href="index.html">
+    Yog’n Moov
+    <span>Pole Dance</span>
+  </a>
+
+  <nav aria-label="Navigation principale">
+    <a href="index.html">Accueil</a>
+    <a href="pole.html">La pole</a>
+    <a href="cours.html">Cours</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="tarifs.html" aria-current="page">Tarifs</a>
+    <a href="avis.html">Avis</a>
+    <a href="julie.html">Julie</a>
+    <a href="studio.html">Studio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
 <main>
-<section><h1>Tarifs et planning</h1></section>
-<section><table><tbody>
-<tr><th>Cours collectif (4 à 5 personnes)</th><td>22 € la séance</td></tr>
-<tr><th>Carte 10 cours</th><td>200 €, 11ᵉ cours offert</td></tr>
-<tr><th>Cours privé</th><td>70 €</td></tr>
-<tr><th>Cours duo</th><td>40 € par personne</td></tr>
-<tr><th>Parent / enfant (1 h)</th><td>60 € le duo</td></tr>
-<tr><th>Stages</th><td>Tarif indiqué pour chaque stage</td></tr>
-<tr><th>Coaching à distance</th><td>129 € pour 4 semaines</td></tr></tbody></table></section>
-<section class="soft"><h2>Le planning</h2><p>Les créneaux évoluent selon les groupes et les disponibilités. Les places sont limitées afin de conserver des cours à taille humaine.</p>
-<p>Vous ne trouvez pas votre créneau ? Contactez-moi : selon les demandes, je peux étudier la création d'un nouveau groupe ou d'une séance privée.</p>
-<p><a class="btn" href="contact.html">Voir les créneaux disponibles</a></p></section></main>
-<footer><p>Yog'n Moov · Pole Dance · Soulières (51130), à 15 min d'Épernay · 06 32 51 49 50</p>
-<p>Pratique sportive et de bien-être, adaptée à chacun. Elle ne remplace pas l'avis d'un médecin.</p>
-<p><a href="https://www.yognmoov.fr">Yog'n Moov : yoga, Pilates, méditation</a></p></footer></body></html>
+
+  <section class="tarifs-hero">
+    <div class="tarifs-hero-inner">
+      <p class="tarifs-kicker">Yog’n Moov · Soulières</p>
+      <h1>Tarifs et planning</h1>
+      <p class="hero-description">
+        Des cours à taille humaine, dans une ambiance conviviale et bienveillante,
+        pour découvrir la pole dance et progresser à votre rythme.
+      </p>
+    </div>
+  </section>
+
+  <section class="tarifs-section">
+    <div class="section-intro">
+      <p class="tarifs-kicker">Les formules</p>
+      <h2>Choisissez la formule qui vous correspond</h2>
+    </div>
+
+    <div class="table-wrap">
+      <table class="tarifs-table">
+        <tbody>
+          <tr>
+            <th scope="row">Cours collectif (4 à 5 personnes)</th>
+            <td>22 € la séance</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Carte 10 cours</th>
+            <td>200 € soit un cours offert</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Cours privé</th>
+            <td>70 €</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Cours duo</th>
+            <td>40 € par personne</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Parent / enfant (1 h)</th>
+            <td>60 € le duo</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Stages</th>
+            <td>Me contacter pour le tarif</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Cours à domicile</th>
+            <td>Me contacter pour le tarif</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Cours sur podium</th>
+            <td>Me contacter pour le tarif</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Cours en extérieur</th>
+            <td>Me contacter pour le tarif</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Coaching à distance</th>
+            <td>129 € pour 4 semaines</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="planning">
+    <div class="planning-inner">
+      <p class="tarifs-kicker">Les disponibilités</p>
+      <h2>Le planning</h2>
+
+      <p>
+        Les créneaux évoluent selon les groupes et les disponibilités.
+        Les places sont limitées afin de conserver des cours à taille humaine.
+      </p>
+
+      <p>
+        Vous ne trouvez pas votre créneau ? Contactez-moi : selon les demandes,
+        je peux étudier la création d'un nouveau groupe ou d'une séance privée.
+      </p>
+
+      <p>
+        <a class="btn" href="contact.html">Voir les créneaux disponibles</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    Yog’n Moov · Pole Dance · Soulières (51130), à 15 min d’Épernay ·
+    06 32 51 49 50
+  </p>
+
+  <p>
+    Pratique sportive et de bien-être, adaptée à chacun.
+    Elle ne remplace pas l'avis d'un médecin.
+  </p>
+
+  <p>
+    <a href="https://www.yognmoov.fr">
+      Yog’n Moov : yoga, Pilates, méditation
+    </a>
+  </p>
+</footer>
+
+</body>
+</html>
